@@ -1,0 +1,53 @@
+name: DGV OS CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+  schedule:
+    # UTC mornings — triggers weekly review path via optional cron job below
+    - cron: "0 7 * * 1-5"
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint / typecheck
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Seed + smoke
+        run: |
+          npm run seed
+          npm run build
+        env:
+          DGV_DB_PATH: ${{ runner.temp }}/dgv-os.sqlite
+          DGV_AUTH_SECRET: ci-secret
+          DGV_ADMIN_EMAIL: divit@dgv.local
+          DGV_ADMIN_PASSWORD: dgv-admin-change-me
+
+  daily-automation:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger morning automation (requires deployed URL)
+        run: |
+          if [ -z "${{ secrets.DGV_APP_URL }}" ]; then
+            echo "DGV_APP_URL secret not set — skipping live cron. Local/scheduled cron uses /api/cron/morning."
+            exit 0
+          fi
+          curl -fsS -X POST \
+            -H "x-dgv-cron-secret: ${{ secrets.DGV_CRON_SECRET }}" \
+            "${{ secrets.DGV_APP_URL }}/api/cron/morning"
