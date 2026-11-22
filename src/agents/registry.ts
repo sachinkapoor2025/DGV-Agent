@@ -3,6 +3,7 @@ export type AgentId =
   | "usaraki"
   | "blossompot"
   | "spicycenter"
+  | "occasionfun"
   | "halloweenready";
 
 export type AgentDefinition = {
@@ -10,6 +11,8 @@ export type AgentDefinition = {
   name: string;
   businessSlug?: string;
   role: string;
+  primary?: boolean;
+  archived?: boolean;
   canAutonomously: string[];
   requiresApproval: string[];
 };
@@ -18,7 +21,7 @@ export const AGENTS: AgentDefinition[] = [
   {
     id: "coo",
     name: "DGV AI COO",
-    role: "Central operating officer across all businesses",
+    role: "Central operating officer across primary businesses",
     canAutonomously: [
       "prioritize-tasks",
       "capacity-analysis",
@@ -27,6 +30,7 @@ export const AGENTS: AgentDefinition[] = [
       "create-tasks",
       "draft-reports",
       "recommend-reassignments",
+      "ai-execution",
     ],
     requiresApproval: [
       "spend-money",
@@ -34,14 +38,17 @@ export const AGENTS: AgentDefinition[] = [
       "production-deploy",
       "bulk-customer-comms",
       "major-pricing",
+      "mydgv-hr-mutations",
     ],
   },
   {
     id: "usaraki",
     name: "UsaRakhi Growth Agent",
     businessSlug: "usaraki",
-    role: "Growth, SEO, ads, conversion, content for UsaRakhi",
+    primary: true,
+    role: "Growth, product research, ads, SEO for UsaRakhi.com",
     canAutonomously: [
+      "product-research",
       "seo-research",
       "competitor-research",
       "content-drafts",
@@ -54,7 +61,8 @@ export const AGENTS: AgentDefinition[] = [
     id: "blossompot",
     name: "Blossompot Growth Agent",
     businessSlug: "blossompot",
-    role: "Growth, SEO, product research, ads for Blossompot",
+    primary: true,
+    role: "Growth, conversion, corporate gifting, reminders for Blossompot.com",
     canAutonomously: [
       "product-research",
       "seo-research",
@@ -68,21 +76,39 @@ export const AGENTS: AgentDefinition[] = [
     id: "spicycenter",
     name: "SpicyCenter Growth Agent",
     businessSlug: "spicycenter",
-    role: "Growth, SEO, catalog content, retention for SpicyCenter",
+    primary: true,
+    role: "B2B buyer acquisition, sourcing desk, export coordination for SpicyCenter.com",
     canAutonomously: [
-      "seo-research",
+      "market-research",
+      "outreach-briefs",
       "content-drafts",
-      "catalog-briefs",
       "experiment-design",
       "kpi-review",
     ],
     requiresApproval: ["ad-spend", "pricing", "production-deploy"],
   },
   {
+    id: "occasionfun",
+    name: "OccasionFun Growth Agent",
+    businessSlug: "occasionfun",
+    primary: true,
+    role: "UK BD, tenders, partner pipeline for OccasionFun.co.uk",
+    canAutonomously: [
+      "bd-research",
+      "proposal-drafts",
+      "case-study-drafts",
+      "tender-fit-analysis",
+      "kpi-review",
+    ],
+    requiresApproval: ["tender-submission", "pricing", "production-deploy", "client-comms"],
+  },
+  {
     id: "halloweenready",
-    name: "HalloweenReady Growth Agent",
+    name: "HalloweenReady Growth Agent (archived)",
     businessSlug: "halloweenready",
-    role: "Seasonal growth, ads, assortment timing for HalloweenReady",
+    primary: false,
+    archived: true,
+    role: "Seasonal agent retained; not in daily primary COO focus",
     canAutonomously: [
       "seasonal-planning",
       "competitor-research",
@@ -96,4 +122,8 @@ export const AGENTS: AgentDefinition[] = [
 
 export function getAgent(id: string) {
   return AGENTS.find((a) => a.id === id);
+}
+
+export function primaryGrowthAgentIds(): Exclude<AgentId, "coo" | "halloweenready">[] {
+  return ["usaraki", "blossompot", "spicycenter", "occasionfun"];
 }

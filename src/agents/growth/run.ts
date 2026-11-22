@@ -1,6 +1,6 @@
 import { and, desc, eq } from "drizzle-orm";
 import { nanoid } from "nanoid";
-import { AGENTS, type AgentId } from "@/agents/registry";
+import { AGENTS, primaryGrowthAgentIds, type AgentId } from "@/agents/registry";
 import { db, ensureSchema } from "@/lib/db/client";
 import {
   agentRuns,
@@ -60,47 +60,58 @@ const GROWTH_PLAYBOOK: Record<
     ],
   },
   spicycenter: {
-    project: "SpicyCenter retention + SEO",
+    project: "SpicyCenter 90-day buyer acquisition",
     experiments: [
       {
-        title: "Category SEO coverage map",
+        title: "UK/UAE/Canada buyer outreach list design",
         outcome:
-          "Map missing category/landing pages vs competitor clusters with priority scores.",
+          "Produce segment lists and messaging angles for grocers, importers and food-service buyers.",
         ai: true,
       },
       {
-        title: "Bulk product description quality pass (pilot 25 SKUs)",
+        title: "Enquiry-to-quote workflow checklist",
         outcome:
-          "Rewrite 25 PDP descriptions with benefits, usage, and SEO entities; ready for review.",
+          "Document assignment, SLA, quote pack and follow-up steps for wholesale enquiries.",
         ai: true,
       },
       {
-        title: "Repeat purchase loop design",
+        title: "Trust-proof content brief (company profile + sample process)",
         outcome:
-          "Draft retention playbook: triggers, offers, email sequence, success metrics.",
+          "Draft company-profile outline, sample process and response-time promise for site.",
+        ai: true,
+      },
+    ],
+  },
+  occasionfun: {
+    project: "OccasionFun 30-day BD & tender pipeline",
+    experiments: [
+      {
+        title: "Priority offer one-pagers (5 offers)",
+        outcome:
+          "Draft Cloud/DevOps, API squad, QA, data and AI PoV one-pagers with entry deliverables.",
+        ai: true,
+      },
+      {
+        title: "Case study evidence cards (4–6)",
+        outcome:
+          "Create evidence-rich project cards from approved internal outcomes (no invented clients).",
+        ai: true,
+      },
+      {
+        title: "Week-1 outreach target list + partner intro script",
+        outcome:
+          "List UK SME/agency/MSP targets and a partner intro script for subcontracting conversations.",
         ai: true,
       },
     ],
   },
   halloweenready: {
-    project: "HalloweenReady seasonal engine",
+    project: "HalloweenReady archived seasonal engine",
     experiments: [
       {
-        title: "Pre-season assortment readiness checklist",
+        title: "Archive: preserve seasonal playbook index",
         outcome:
-          "Publish SKU readiness matrix (content, images, ads, stock) with owners and dates.",
-        ai: true,
-      },
-      {
-        title: "Competitor ads & creative teardown",
-        outcome:
-          "Document competitor angles, offers, and 5 testable creative hypotheses.",
-        ai: true,
-      },
-      {
-        title: "CVR sprint plan for peak window",
-        outcome:
-          "Prioritized CRO backlog for homepage/collection/PDP with expected impact.",
+          "Index prior seasonal assets for reactivation; do not prioritize in daily COO focus.",
         ai: true,
       },
     ],
@@ -213,7 +224,8 @@ export function runGrowthAgent(agentId: Exclude<AgentId, "coo">) {
 }
 
 export function runAllGrowthAgents() {
-  return (["usaraki", "blossompot", "spicycenter", "halloweenready"] as const).map(
-    (id) => ({ agentId: id, ...runGrowthAgent(id) }),
-  );
+  return primaryGrowthAgentIds().map((id) => ({
+    agentId: id,
+    ...runGrowthAgent(id),
+  }));
 }

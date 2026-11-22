@@ -115,3 +115,52 @@ export const auditLogs = sqliteTable("audit_logs", {
     .notNull()
     .default(sql`(datetime('now'))`),
 });
+
+/** Imported business strategies — require review before approved use. */
+export const strategies = sqliteTable("strategies", {
+  id: text("id").primaryKey(),
+  businessSlug: text("business_slug").notNull(),
+  title: text("title").notNull(),
+  status: text("status").notNull().default("pending_review"),
+  sourceFile: text("source_file"),
+  sourceFormat: text("source_format").notNull().default("pdf_text"),
+  payloadJson: text("payload_json").notNull().default("{}"),
+  missingFieldsJson: text("missing_fields_json").notNull().default("[]"),
+  reviewedBy: text("reviewed_by"),
+  reviewedAt: text("reviewed_at"),
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
+});
+
+/** AI-only execution ledger (independent of MyDGV). */
+export const aiExecutions = sqliteTable("ai_executions", {
+  id: text("id").primaryKey(),
+  agentId: text("agent_id").notNull(),
+  businessSlug: text("business_slug"),
+  kind: text("kind").notNull(),
+  title: text("title").notNull(),
+  status: text("status").notNull().default("completed"),
+  inputJson: text("input_json").notNull().default("{}"),
+  outputJson: text("output_json").notNull().default("{}"),
+  syncedToMydgv: integer("synced_to_mydgv", { mode: "boolean" })
+    .notNull()
+    .default(false),
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
+});
+
+/** Sync map DGV task ↔ MyDGV task (idempotent). */
+export const syncLinks = sqliteTable("sync_links", {
+  id: text("id").primaryKey(),
+  dgvTaskId: text("dgv_task_id").notNull().unique(),
+  mydgvTaskId: text("mydgv_task_id").notNull().unique(),
+  idempotencyKey: text("idempotency_key").notNull().unique(),
+  lastSyncAt: text("last_sync_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
+  lastDirection: text("last_direction").notNull().default("dgv_to_mydgv"),
+  status: text("status").notNull().default("synced"),
+  detailJson: text("detail_json").notNull().default("{}"),
+});

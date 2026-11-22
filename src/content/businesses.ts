@@ -1,73 +1,124 @@
 /**
- * Foundation business profiles for DGV.
- * Replace/extend goals & KPIs with Divit's ChatGPT growth plans when provided.
+ * DGV primary portfolio + archived businesses.
+ * Primary four: UsaRakhi, Blossompot, SpicyCenter, OccasionFun.
+ * HalloweenReady retained as archived (not deleted).
+ *
+ * Strategy content is imported from approved plans — not invented here.
+ * See data/strategy-imports/ and src/lib/strategy/
  */
-export const BUSINESS_SEED = [
+
+export type BusinessSeed = {
+  id: string;
+  slug: string;
+  name: string;
+  website?: string;
+  mission: string;
+  goals: string[];
+  kpis: { primary: string[]; secondary: string[] };
+  primary: boolean;
+  archived: boolean;
+};
+
+export const BUSINESS_SEED: BusinessSeed[] = [
   {
     id: "biz_usaraki",
     slug: "usaraki",
     name: "UsaRakhi",
+    website: "https://usaraki.com",
     mission:
-      "Grow USA/Canada rakhi & festive gifting ecommerce with SEO, conversion, and seasonal campaigns.",
+      "Expand from seasonal Rakhi into curated Indian gifting, personalized gifting and Indian-inspired home/lifestyle for USA delivery — evidence-based product expansion.",
     goals: [
-      "Increase organic traffic for high-intent rakhi keywords",
-      "Improve conversion rate on PDP and cart",
-      "Build repeatable seasonal playbooks",
+      "Validate personalized/POD and Indian-inspired décor launches",
+      "Protect USA fulfillment trust (delivery promise)",
+      "Execute 45-day sales playbook from approved strategy",
     ],
     kpis: {
-      primary: ["revenue", "orders", "organic_sessions", "cvr"],
-      secondary: ["aov", "email_list", "ad_roas"],
+      primary: ["revenue", "orders", "cvr", "ad_test_learnings"],
+      secondary: ["aov", "organic_sessions", "new_sku_validation"],
     },
+    primary: true,
+    archived: false,
   },
   {
     id: "biz_blossompot",
     slug: "blossompot",
     name: "Blossompot",
+    website: "https://blossompot.com",
     mission:
-      "Scale flower/gift ecommerce with product research, SEO content, and paid acquisition efficiency.",
+      "USA gifting destination that helps customers remember occasions, choose gifts quickly and send with confidence — 30-day sales sprint focus.",
     goals: [
-      "Expand catalog with validated demand products",
-      "Strengthen local + occasion SEO",
-      "Reduce CAC while protecting margin",
+      "Focus hero assortment (30–50 products) by occasion/budget",
+      "Drive reminder-to-purchase and corporate gifting engines",
+      "Improve conversion proof and delivery clarity",
     ],
     kpis: {
-      primary: ["revenue", "orders", "organic_sessions", "cac"],
-      secondary: ["margin", "repeat_rate", "ad_roas"],
+      primary: ["revenue", "orders", "cvr", "reminder_signups"],
+      secondary: ["corporate_enquiries", "repeat_rate", "cac"],
     },
+    primary: true,
+    archived: false,
   },
   {
     id: "biz_spicycenter",
     slug: "spicycenter",
     name: "SpicyCenter",
+    website: "https://spicycenter.com",
     mission:
-      "Grow spice/grocery ecommerce through assortment, content SEO, and retention loops.",
+      "Buyer-generating India spice sourcing/export business — wholesale, sourcing desk and private label without speculative inventory.",
     goals: [
-      "Improve category SEO coverage",
-      "Increase subscription/repeat purchase",
-      "Ship high-confidence product descriptions at scale",
+      "Close profitable repeatable B2B orders in 90 days",
+      "Focus UK, UAE/GCC, Canada outreach",
+      "Fix trust proof and enquiry-to-quote workflow",
     ],
     kpis: {
-      primary: ["revenue", "orders", "organic_sessions", "repeat_rate"],
-      secondary: ["aov", "review_velocity", "ad_roas"],
+      primary: ["qualified_enquiries", "quotes_sent", "orders_won", "repeat_orders"],
+      secondary: ["sample_requests", "response_time", "markets_active"],
     },
+    primary: true,
+    archived: false,
+  },
+  {
+    id: "biz_occasionfun",
+    slug: "occasionfun",
+    name: "OccasionFun",
+    website: "https://occasionfun.co.uk",
+    mission:
+      "UK-facing technology partner: client engagement, requirements, bidding and delivery coordination — with DGV as specialist engineering delivery partner where approved.",
+    goals: [
+      "Create conversations in Week 1; proposals Weeks 2–3; pipeline by Day 30",
+      "Lead with focused offers (Cloud/DevOps, API squad, QA, data, AI PoV)",
+      "Build tender/framework readiness without overselling certifications",
+    ],
+    kpis: {
+      primary: ["conversations", "qualified_opportunities", "proposals", "paid_engagements"],
+      secondary: ["partner_intros", "tender_submissions", "case_studies_published"],
+    },
+    primary: true,
+    archived: false,
   },
   {
     id: "biz_halloweenready",
     slug: "halloweenready",
     name: "HalloweenReady",
+    website: "https://halloweenready.com",
     mission:
-      "Maximize seasonal Halloween ecommerce revenue via assortment timing, ads, and conversion.",
+      "Seasonal Halloween ecommerce (archived from primary OS portfolio — retained for historical/seasonal reactivation).",
     goals: [
-      "Pre-season assortment and content readiness",
-      "Aggressive but approved paid testing",
-      "Post-season learning capture for next year",
+      "Preserve playbooks for next seasonal window",
+      "Do not prioritize in daily COO focus unless reactivated",
     ],
     kpis: {
       primary: ["revenue", "orders", "ad_roas", "cvr"],
       secondary: ["sell_through", "organic_sessions", "returns"],
     },
+    primary: false,
+    archived: true,
   },
-] as const;
+];
+
+export const PRIMARY_BUSINESS_SLUGS = BUSINESS_SEED.filter((b) => b.primary && !b.archived).map(
+  (b) => b.slug,
+);
 
 export const TEAM_SEED = [
   {
@@ -107,14 +158,7 @@ export const TEAM_SEED = [
     name: "AI Execution Pod",
     email: "ai@dgv.local",
     role: "AI Agent Workforce",
-    skills: [
-      "research",
-      "seo",
-      "content",
-      "analysis",
-      "coding",
-      "reporting",
-    ],
+    skills: ["research", "seo", "content", "analysis", "coding", "reporting"],
     weeklyCapacityHours: 80,
   },
 ] as const;

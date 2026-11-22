@@ -26,6 +26,14 @@ function has(...keys: string[]) {
 export function listIntegrations(): IntegrationStatus[] {
   return [
     {
+      id: "mydgv",
+      name: "MyDGV (employee-portal)",
+      configured: has("MYDGV_API_URL", "MYDGV_DGV_OS_API_KEY"),
+      mode: has("MYDGV_API_URL", "MYDGV_DGV_OS_API_KEY") ? "execute" : "stub",
+      setup:
+        "Deploy employee-portal feature/dgv-ai-os-integration with SAM param DgvOsApiKey. Set MYDGV_API_URL (API Gateway prod URL) + MYDGV_DGV_OS_API_KEY in DGV OS env. Never put the key in the browser.",
+    },
+    {
       id: "cursor-agents",
       name: "Cursor AI Agents / MCP",
       configured: true,

@@ -105,5 +105,40 @@ export function ensureSchema() {
       detail_json TEXT NOT NULL DEFAULT '{}',
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
+    CREATE TABLE IF NOT EXISTS strategies (
+      id TEXT PRIMARY KEY,
+      business_slug TEXT NOT NULL,
+      title TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'pending_review',
+      source_file TEXT,
+      source_format TEXT NOT NULL DEFAULT 'pdf_text',
+      payload_json TEXT NOT NULL DEFAULT '{}',
+      missing_fields_json TEXT NOT NULL DEFAULT '[]',
+      reviewed_by TEXT,
+      reviewed_at TEXT,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS ai_executions (
+      id TEXT PRIMARY KEY,
+      agent_id TEXT NOT NULL,
+      business_slug TEXT,
+      kind TEXT NOT NULL,
+      title TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'completed',
+      input_json TEXT NOT NULL DEFAULT '{}',
+      output_json TEXT NOT NULL DEFAULT '{}',
+      synced_to_mydgv INTEGER NOT NULL DEFAULT 0,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS sync_links (
+      id TEXT PRIMARY KEY,
+      dgv_task_id TEXT NOT NULL UNIQUE,
+      mydgv_task_id TEXT NOT NULL UNIQUE,
+      idempotency_key TEXT NOT NULL UNIQUE,
+      last_sync_at TEXT NOT NULL DEFAULT (datetime('now')),
+      last_direction TEXT NOT NULL DEFAULT 'dgv_to_mydgv',
+      status TEXT NOT NULL DEFAULT 'synced',
+      detail_json TEXT NOT NULL DEFAULT '{}'
+    );
   `);
 }

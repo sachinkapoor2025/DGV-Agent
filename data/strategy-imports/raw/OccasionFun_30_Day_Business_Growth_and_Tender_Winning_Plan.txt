@@ -1,0 +1,704 @@
+OCCASIONFUN LTD
+30-Day Business Development &
+Tender-Winning Plan
+UK client acquisition  Prime-contractor partnerships  Public procurement  Repeatable
+project pipeline
+Primary outcome: turn OccasionFun from a website and capability catalogue into a focused, active
+business-development operation—creating conversations in Week 1, qualified opportunities and proposals
+in Weeks 2–3, and a repeatable pipeline by Day 30.
+Prepared for internal team execution. This report excludes internal financial/runway information.
+The 30-day strategy is deliberately split into two lanes: near-term commercial projects (small fixed-scope work,
+subcontracting, support and discovery) and long-term procurement opportunities (tenders, frameworks, primes and
+supplier onboarding). A tender award inside 30 days is not controllable; pipeline creation and first paid work are the
+controllable goals.
+
+1. Executive strategy
+Core positioning: OccasionFun is the UK-facing technology partner that engages clients, clarifies
+requirements, manages the relationship and coordinates delivery—with DGV providing specialist
+engineering delivery where disclosed, approved and contractually permitted.
+Do not sell eight broad service lines equally. Lead with a small number of credible, buyer-friendly offers that solve
+urgent problems and are easy to scope, price and start.
+Recommended priority offers
+Offer
+Buyer problem
+Fast entry deliverable
+Follow-on
+AWS / Cloud & DevOps
+rescue
+Unstable deployments, cloud cost,
+migration, incidents, infrastructure
+backlog
+1–2 week cloud health check /
+deployment improvement
+Migration, automation,
+ongoing cloud support
+Application/API delivery
+squad
+Backlog, integrations, MVP,
+modernisation
+Fixed-scope discovery +
+prototype / API sprint
+Milestone delivery or monthly
+engineering capacity
+QA automation &
+release confidence
+Manual testing, regression risk,
+release delays
+Test audit + automation starter
+pack
+Automation suite and
+recurring QA support
+Data pipeline / reporting
+sprint
+Disconnected systems, poor data
+quality, delayed reporting
+Data assessment + one working
+pipeline/dashboard
+Data engineering backlog and
+support
+AI workflow
+proof-of-value
+Manual admin, document handling,
+repetitive processes
+2-week prototype with evaluation
+and human controls
+Production integration and
+optimisation
+Revenue paths—pursue in parallel
+ Direct UK SMEs and scale-ups: short paid discovery, engineering sprint, QA audit or support retainer.
+ 
+ Subcontracting: become a named delivery partner for UK digital agencies, consultancies, MSPs and prime contractors
+ who already have clients but need delivery capacity.
+ Selective tenders: bid only when scope, eligibility, evidence, delivery and commercial conditions are a credible fit.
+ 
+ Supplier/framework route: build registration and framework readiness; pursue open opportunities and partner routes
+ rather than waiting for framework membership.
+ Recurring support: convert completed sprint work into defined monthly support, DevOps, QA or enhancement capacity.
+ 
+2. Website and positioning audit
+The site is materially better than a generic startup landing page: it explains services, delivery lifecycle, the UK/DGV
+relationship and procurement posture. The opportunity is to turn that credibility into conversion and proof.
+Strengths to preserve
+ Clear UK-facing company identity and company number; the site explains OccasionFun’s role in engagement,
+ requirements, bidding and coordination.
+ Service coverage maps to real demand: AWS/DevOps, software/API, AI, QA, web, data, secure engineering and
+ managed support.
+ Delivery model is described transparently: OccasionFun coordinates the client-facing engagement; DGV is the
+ technology delivery partner.
+ Public-sector page appropriately avoids blanket claims of certification or framework status and states that tender
+ eligibility is assessed requirement-by-requirement.
+ The site describes a delivery lifecycle, acceptance criteria, testing and handover—useful procurement language.
+ 
+Conversion and proof gaps to fix immediately
+Issue
+Why it matters
+Action
+Case studies lack named
+clients/outcomes
+Buyer sees capability, but cannot
+assess evidence, scale or impact.
+Create 4–6 evidence-rich project cards using approved
+anonymised examples: problem, scope, architecture, team,
+delivery, measurable outcome. Clearly label anonymised/internal
+work and never imply client endorsement.
+No one-page capability
+statement visible at point of
+enquiry
+Procurement and prime-contractor
+contacts need a forwardable
+summary.
+Create downloadable 2-page capability statement, service matrix,
+partner model and company details.
+Contact conversion /
+notification configuration
+needs a live test
+If enquiry form submissions are not
+routed reliably, prospects
+disappear.
+Submit test enquiries from 3 devices; confirm notification, CRM
+entry, autoresponse, owner and SLA. Verify every published
+email/phone and page footer.
+Services are broad and
+buyer outcomes are not
+front-and-centre
+Buyers may not know what to
+purchase first.
+Add 5 productised entry offers with starting scope, typical
+duration, outputs and a clear CTA. Avoid publishing unverified
+pricing.
+Limited visible proof of
+team depth and continuity
+Procurement worries about
+capacity and single-person
+dependency.
+Add approved role profiles, delivery governance, backup/cover
+model, quality gates, sample artefacts and team CV summaries.
+No clear
+prime/subcontractor
+landing page with a partner
+CTA
+Prime contractors need fast
+confidence and a defined way to
+engage.
+Build /technology-delivery-partner page: skills, engagement
+models, availability process, governance, references/evidence,
+UK coordination, transparent delivery location.
+Website message to test
+“UK technology partner for cloud, software, QA and data delivery. Clear scope, accountable
+coordination, specialist engineering capacity.” CTA: “Book a 20-minute requirement call” and
+“Request capability statement.”
+Avoid claims such as “government approved,” “framework supplier,” guaranteed savings, certifications or named client experience unless
+the evidence and status are verified.
+
+3. Market entry: where to get the first projects
+Do not rely on tenders alone. The most controllable first-month pipeline is direct commercial outreach and
+subcontracting. Public procurement is a second engine that builds a longer-term route.
+Priority segment matrix
+Priority
+Target buyer
+Why
+First offer
+1
+UK software/digital agencies
+(10–100 people)
+They often win client work but need
+overflow engineering, QA or cloud
+capacity.
+White-label delivery partner; 2-week sprint;
+QA automation; AWS/DevOps support
+2
+MSPs / cloud consultancies
+Need specialist cloud, automation,
+application or data capability without
+hiring permanently.
+Cloud engineering partner;
+migration/automation; defined support
+capacity
+3
+Small and mid-sized
+businesses (20–500
+employees)
+Owners/CTOs have urgent systems,
+integration, website, data or automation
+needs.
+Paid discovery, API integration sprint, cloud
+health check, AI workflow prototype
+4
+Prime contractors and larger
+consultancies
+Supply-chain route to longer contracts;
+may require niche capability.
+Capability statement + targeted skills matrix +
+bid support
+5
+Public sector, education, NHS,
+local authorities
+Tender opportunities and future
+pipeline; often longer procurement
+cycle.
+Selective bid, market engagement,
+subcontracting, supplier registration
+6
+Product companies / SaaS
+firms
+Need product backlog, release QA,
+integrations and cloud operations.
+Fractional engineering squad, QA automation,
+DevOps improvement
+Geographic focus
+ Start with UK-wide remote delivery, with relationship-led focus on London, South East, Midlands and North West—do
+ not restrict search only to Southampton.
+ Build UK-facing business development through the named UK representative; schedule weekly buyer/partner calls.
+ 
+ For overseas delivery, disclose delivery location and access arrangements where required. Review tender-specific
+ restrictions, UK GDPR and security conditions before committing.
+Commercial offer ladder
+Stage
+Offer
+Goal
+Entry
+Paid discovery / technical assessment (1–5 days)
+Start quickly; define scope and risks
+First delivery
+Fixed-scope 1–2 week sprint
+Demonstrate delivery; get acceptance and reference
+permission
+Expansion
+Monthly capacity / project milestones
+Convert into longer engagement
+Recurring
+Cloud, application, QA or data support retainer
+Predictable repeat work with defined SLA and exclusions
+
+4. Tender and procurement strategy
+Public procurement requires a disciplined process. UK guidance recommends supplier readiness, opportunity fit,
+eligibility checks, evidence, bid/no-bid discipline and tailored answers. OccasionFun should build a bid library and
+avoid bidding indiscriminately.
+Opportunity sources to monitor
+Channel
+Use
+Cadence
+Find a Tender / Central Digital
+Platform
+Public-sector notices, planned procurement, market engagement and
+pipeline notices; supplier profile registration and saved searches.
+Daily alerts; 2 focused
+searches per day
+Contracts Finder
+Search contracts and legacy notices/awards; identify buyer and
+incumbent suppliers. Check the procurement regime and notice
+status.
+3 times/week
+Digital Marketplace / G-Cloud
+route
+Framework suppliers and public-sector digital/cloud procurement;
+assess supplier eligibility and current joining windows.
+Weekly
+framework-readiness
+review
+Public Contracts Scotland /
+Sell2Wales / eSourcing NI
+Regional opportunities and portals where relevant.
+2 times/week
+Tender intelligence
+aggregators
+Keyword discovery, awards, re-tenders, incumbent/prime
+identification; verify every notice on official source.
+Daily quick scan
+Prime contractor supplier
+portals
+Supplier onboarding and subcontracting opportunities.
+5 applications / partner
+enquiries per week
+Keywords and service codes
+ AWS cloud support / cloud migration / DevOps / infrastructure automation / cloud operations.
+ 
+ Software development / API integration / application development / digital platform / application maintenance.
+ 
+ QA testing / test automation / regression testing / software assurance.
+ 
+ Data engineering / data integration / analytics / reporting / ETL.
+ 
+ AI workflow / automation / intelligent document processing—but only where the scope and evaluation are realistic.
+ 
+ Managed application support / technical support / service transition / maintenance.
+ 
+Tender bid/no-bid scoring (100 points)
+Factor
+Score
+Rule
+Capability fit
+20
+Strong match to proven capability
+Eligibility & compliance
+20
+All mandatory conditions can be met
+Evidence / case studies
+15
+Relevant proof and named roles available
+Partner / buyer access
+15
+Existing relationship, early engagement or clear route
+Delivery feasibility
+15
+Capacity, timeline, dependencies and delivery location workable
+Commercial attractiveness
+15
+Scope, payment terms, risk and margin acceptable
+Decision: 75+ = bid; 60–74 = partner/clarify before decision; below 60 = no-bid. Any hard mandatory
+failure is automatic no-bid regardless of score.
+Bid process
+ Within 24 hours of finding: record notice, buyer, deadline, value, scope, mandatory criteria, scoring, documents and
+ likely incumbent/prime.
+ Within 48 hours: bid/no-bid meeting, assign owner and technical author, make clarification questions, evidence gaps
+ and storyboard answers.
+
+ Use requirement-to-response matrix; answer in the buyer’s exact order; cite evidence and measurable outputs.
+ 
+ Independent red-team review 24–48 hours before submission; compliance checklist and submission confirmation
+ saved.
+ After award/loss: request feedback, record score and update bid library.
+ 
+5. The first 30 days — execution calendar
+Day
+Primary actions
+Deliverable / target
+1–2
+Verify website enquiries, phone/email, CRM; create lead tracker;
+approve service offers and capability statement outline; confirm team
+roles.
+No missed enquiry; one
+business-development workspace; 5 offers
+defined
+3–5
+Create capability statement, 4–6 project evidence cards, partner
+one-pager, bid library folder, supplier documents checklist; prepare 3
+outreach sequences.
+Sales pack ready; 100 initial target companies
+6–7
+Start outbound; 20 targeted messages/day; call/LinkedIn follow-up; first
+prime-contractor partner meetings; tender alert setup.
+100 contacts touched; 5–10
+replies/conversations target
+8–10
+Build second prospect list; follow up; publish landing pages for
+Cloud/DevOps, QA, Software/API and Partner Delivery; identify 10
+tenders.
+200+ cumulative prospects; 10 opportunities
+screened
+11–14
+Offer paid discovery/sprint; conduct requirement calls; send tailored
+proposals within 24–48 hours; submit first selective bid(s).
+5 qualified conversations; 3 proposals/quotes;
+1–2 bid decisions
+15–18
+Partner outreach wave 2; target agency/MSP partnerships; create one
+short demo or technical proof for the most common buyer pain.
+10 partner conversations; 2 partner
+opportunities
+19–21
+Follow up proposals; create proof-led case study content; submit
+second wave of selective bids; meet buyer/partner contacts.
+5–8 proposals/quotes cumulative; 2–4 active
+opportunities
+22–25
+Run delivery discovery; negotiate scope; convert pilot/sprint; continue
+targeted tender research and supplier onboarding.
+Aim for first paid engagement or clear
+award/PO path
+26–28
+Close outstanding opportunities; review pipeline; refine offers based on
+responses; request partner introductions.
+Top 10 opportunities ranked; next steps and
+dates assigned
+29–30
+Review metrics, wins/losses, outreach response, bid feedback, offer
+conversion; set next 60-day plan.
+Monthly review pack; pipeline forecast;
+repeatable cadence
+Daily non-negotiable rhythm
+ 09:00–09:15: pipeline stand-up—new leads, replies, deadlines, proposals, blockers.
+ 
+ Business development: minimum 20 personalised outbound touches/day (not mass spam); 10 follow-ups/day.
+ 
+ Tender owner: 30-minute opportunity scan, shortlist and bid calendar.
+ 
+ Technical lead: 1–2 hours on proposals, proof/demo or bid response as assigned.
+ 
+ End of day: CRM updated; every opportunity has an owner, next action and date.
+ 
+6. Team ownership and weekly targets
+Role
+Ownership
+Weekly target
+UK business
+representative / client
+lead
+Calls, meetings, introductions, buyer relationship,
+proposal discussion and negotiation.
+15–20 buyer/partner conversations attempted;
+5+ live conversations; 2–3 proposal discussions
+Business development /
+lead researcher
+Build lists, research decision makers, personalised
+outreach, follow-ups and CRM hygiene.
+100–125 qualified contacts researched; 100+
+touches; 10+ follow-ups/day
+Bid coordinator
+Tender scans, bid calendar, requirements matrix,
+compliance documents, deadlines, bid/no-bid packs.
+10–15 opportunities screened; 1–3 high-fit bid
+decisions
+Technical lead / architect
+Discovery calls, solution outlines, estimates, proof
+demos, technical answers and delivery readiness.
+2 technical proposal inputs; 1 proof asset/demo
+improved weekly
+SEO/content
+Landing pages, proof content, LinkedIn posts,
+capability articles and outreach assets.
+2 commercial landing pages or proof assets; 3
+posts/week
+QA / reviewer
+Proposal review, evidence validation, consistency, risk,
+scope and acceptance checks.
+Every proposal reviewed; every bid compliance
+checked
+Suggested team rotation
+ One named person owns each opportunity from discovery to closure—no shared/unowned leads.
+ 
+ Technical contributors are assigned only when the opportunity passes initial qualification.
+ 
+ Use a small bid pod: bid lead + technical owner + commercial reviewer + final QA reviewer.
+ 
+ Do not have the whole team writing a bid. Use a controlled library and assign specific sections.
+ 
+Weekly business-development review agenda
+ Pipeline by stage and value/size band; next action and close date.
+ 
+ Outreach volume, replies, meetings, qualified requirements and proposals.
+ 
+ Tender shortlist: score, deadline, owner, evidence gaps, decision.
+ 
+ Partner pipeline: new relationships, supplier onboarding, introductions.
+ 
+ Website conversions and enquiry response time.
+ 
+ Wins, losses and lessons; next week’s top 10 targets.
+ 
+7. Outreach system and templates
+Use personalised outreach with a concrete capability and an easy next step. The message should not read like a
+generic offshore staffing pitch. Lead with the buyer’s delivery problem and the low-risk way to test the partnership.
+Template A — Digital agency / consultancy
+Subject: Delivery support for upcoming software / cloud projects
+Hi [Name],
+I’m reaching out from OccasionFun, a UK technology services company. We support client engagement and project
+coordination, with specialist engineering delivery through DGV where appropriate. Our capabilities include
+software/API development, AWS/DevOps, QA automation and data engineering.
+If your team has overflow work, a delivery gap or a project needing specialist capacity, we can start with a clearly
+scoped sprint or assessment rather than a long commitment. Would a 20-minute conversation next week be useful to
+understand where we may fit?
+Regards,
+[Name]
+Template B — Prime contractor / supplier partnership
+Subject: UK technology delivery partner — cloud, software, QA and data
+Hello [Name],
+OccasionFun Ltd is a UK technology services company coordinating client engagement and project delivery with DGV
+as a specialist technology delivery partner. We are interested in supporting prime contractors and consultancies where
+additional engineering capability is required.
+Our areas include AWS/DevOps, application/API development, QA automation, data engineering and defined
+application support. We can provide a capability statement and relevant evidence, and we are transparent about
+delivery roles, locations and subcontracting arrangements.
+Could you advise the correct supplier or delivery-partner onboarding route and whether any current programmes
+require these capabilities?
+Regards,
+[Name]
+Template C — SME / CTO
+Subject: A short technical assessment for [specific issue]
+Hi [Name],
+We help UK organisations address practical technology delivery problems across cloud, software, integrations, data
+and testing. Rather than propose a large project upfront, we can scope a short assessment around [specific problem
+observed] and provide a prioritised plan, risks and recommended next steps.
+If useful, I can share a brief outline for a [cloud health check/API integration/QA automation] assessment. Would you
+be open to a short call?
+Regards,
+[Name]
+Follow-up cadence
+
+Touch
+Timing
+Message
+1
+Day 0
+Personalised value + one clear question
+2
+Day 3
+Follow-up with relevant offer or proof asset
+3
+Day 7
+Ask whether timing or contact is appropriate
+4
+Day 14
+Close loop; invite future project/partner route
+Lead qualification questions
+ What outcome or problem needs solving? What is the deadline?
+ 
+ Is budget approved and how is the supplier selected?
+ 
+ What are the required skills, systems, access and delivery location?
+ 
+ Who makes the decision and who signs off?
+ 
+ Is this a fixed project, backlog, resource need or ongoing support?
+ 
+ What is the next action and date?
+ 
+8. Bid library and procurement readiness
+Build one controlled folder and one reusable response library. Every document must be current, approved and factually
+supported. Government guidance highlights supplier registration, evidence, team continuity, subcontractor
+transparency, tailored responses and a clear bid-management process.
+Documents to prepare in Week 1
+ Company profile and capability statement (2 pages).
+ 
+ Company registration, ownership, supplier details and authorised contacts.
+ 
+ Insurance schedule and proof of cover, if held; verify requested levels before bidding.
+ 
+ Approved policies: information security, data protection, health & safety, equality, environmental, business continuity,
+ complaints, modern slavery, anti-bribery, AI use—only publish or claim what exists and is approved.
+ Team CVs/role profiles, skills matrix, availability process and continuity/cover model.
+ 
+ 3–6 project case studies with problem, work delivered, architecture/tools, role, timeline and outcome. Distinguish client
+ work, internal projects, prototypes and anonymised work.
+ Delivery methodology: discovery, scope, planning, development, testing, deployment, acceptance and handover.
+ 
+ Quality assurance and change control templates.
+ 
+ Risk register, assumptions, dependencies and mobilisation plan.
+ 
+ Subcontractor/DGV information: legal relationship, role, delivery location, access controls, disclosure and client
+ approval process.
+ Commercial template: rate card or pricing model, fixed-scope offer descriptions, payment milestones and
+ change-control wording.
+Tender response matrix
+Requirement
+Mandatory?
+Evidence
+Owner
+Status
+Supplier eligibility
+Yes/No
+Registration/profile
+Bid lead
+Open/Done
+Technical method
+Scored
+Method, architecture, deliverables
+Technical lead
+Open/Done
+Case studies
+Scored
+Relevant evidence
+Delivery lead
+Open/Done
+Team & capacity
+Mandatory/scor
+ed
+CVs, roles, continuity
+Team owner
+Open/Done
+Security / data
+Mandatory
+Policies, controls, transfer
+assessment
+Compliance
+owner
+Open/Done
+Price / terms
+Mandatory
+Pricing, assumptions, exclusions
+Commercial
+owner
+Open/Done
+Social value
+Scored
+Realistic commitments + measures
+Bid lead
+Open/Done
+Case-study format: Client/sector (approved or anonymised) → challenge → scope → team/role →
+solution → measurable result → lessons → relevance to this tender. Never invent a result or client.
+
+9. KPI dashboard and Day-30 success criteria
+Metric
+30-day target
+Why it matters
+Qualified prospects researched
+300–500
+Creates a targeted prospect pool
+Personalised outbound touches
+400–600
+Consistent pipeline generation
+Follow-ups
+200+
+Most replies come from disciplined follow-up
+Partner / prime conversations
+15–25
+Subcontracting and repeat pipeline route
+Qualified requirement calls
+8–15
+Tests market fit and creates proposals
+Proposals / quotes
+5–10
+Moves conversations to commercial stage
+Tender opportunities screened
+40–60
+Builds discipline and awareness
+High-fit tender bids
+2–5
+Quality over volume
+Supplier / prime onboarding
+10–20
+Creates future access to work
+Paid work / PO / paid discovery
+Target: 1+
+Near-term proof of commercial traction
+Pipeline with next step
+10+ active opportunities
+No lead without a next action/date
+Dashboard stages
+New lead → contacted → replied → meeting → qualified → discovery/quote → proposal → negotiation →
+won/lost/nurture. Track source, service line, buyer, expected start, decision date, owner, next action, reason lost and
+estimated opportunity size.
+Day 30 review questions
+ Which offer produced the most replies and meetings?
+ 
+ Which segment gave the shortest path to a qualified requirement?
+ 
+ Did partner/subcontracting outreach outperform direct prospecting?
+ 
+ What proof or compliance gaps repeatedly blocked bids?
+ 
+ Which opportunities have a realistic start date in the next 30–60 days?
+ 
+ Which activity should be stopped, doubled or redesigned?
+ 
+10. Risk controls and recommended decisions
+Key risks
+Risk
+Mitigation
+Bidding too broadly
+Use bid/no-bid score; target only 2–5 strong bids during the month.
+No client reference or
+measurable evidence
+Create honest evidence packs from completed work, internal products and prototypes;
+request references/permissions where possible.
+Over-reliance on public
+tenders
+Direct commercial sales + prime/subcontracting + selective tenders in parallel.
+Website enquiry not reaching
+owner
+Test all forms and channels end-to-end; establish response SLA under 4 business
+hours.
+Delivery location or data
+restrictions
+Review every tender; disclose partner and location; confirm security and UK GDPR
+transfer requirements before bid.
+Unclear scope / underpriced
+project
+Paid discovery, written assumptions/exclusions, milestones, change control and
+acceptance criteria.
+No follow-up discipline
+CRM mandatory; every lead has owner, next action and date; daily stand-up.
+Claims not supported
+Evidence approval process for case studies, credentials, certifications and metrics.
+Immediate management decisions
+ Approve five entry offers and one primary message.
+ 
+ Assign a named business-development owner and named bid coordinator.
+ 
+ Approve the 30-day daily outreach target and CRM tracker.
+ 
+ Approve creation of capability statement, partner page and case-study pack.
+ 
+ Approve a strict bid/no-bid process and reviewer for every tender.
+ 
+ Approve UK representative calendar for buyer/partner meetings and follow-up.
+ 
+ Agree that first-month success is pipeline quality, proposals, partner routes and first paid work—not website traffic or
+ tender volume alone.
+Final recommendation
+OccasionFun should spend the next 30 days acting like a focused UK business-development team,
+not a passive tender website. Start selling short, low-risk technical engagements and delivery
+partnerships immediately. Use tenders to build longer-term opportunity, but pursue only those where
+eligibility, evidence, delivery and commercial fit are strong. The combination creates the fastest path to
+conversations and a sustainable pipeline.
+Research references
+ OccasionFun website, services, public-sector and delivery model: https://www.occasionfun.co.uk/ and linked pages.
+ UK Government SME/VCSE Bid Pack (published 6 Oct 2026):
+https://www.gov.uk/government/publications/smevcse-public-procurement-bid-pack/smevcse-bid-pack
+ UK Government public procurement opportunities: https://www.gov.uk/tendering-for-public-sector-contracts
+ Contracts Finder: https://www.gov.uk/contracts-finder
+ Find a Tender / Central Digital Platform: https://www.find-tender.service.gov.uk/
+ Digital Marketplace: https://www.gov.uk/digital-marketplace
+ G-Cloud 15 announcement (10 Aug 2026): https://www.gov.uk/government/news/g-cloud-relaunches-with-biggest-upgrade-in-its-history
+ Supplier Registration Service information: https://supplierregistration.cabinetoffice.gov.uk/

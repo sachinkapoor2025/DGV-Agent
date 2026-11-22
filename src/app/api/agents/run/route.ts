@@ -33,6 +33,7 @@ export async function POST(req: Request) {
     body.agent === "usaraki" ||
     body.agent === "blossompot" ||
     body.agent === "spicycenter" ||
+    body.agent === "occasionfun" ||
     body.agent === "halloweenready"
   ) {
     return NextResponse.json({ ok: true, result: runGrowthAgent(body.agent) });

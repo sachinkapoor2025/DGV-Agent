@@ -25,6 +25,9 @@
 *.pem
 /data/*.sqlite
 /data/*.sqlite-*
+# keep strategy text extracts; ignore local secrets
+.env
+.env.*
 
 # debug
 npm-debug.log*
