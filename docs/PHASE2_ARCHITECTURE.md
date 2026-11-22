@@ -37,6 +37,17 @@ Server-to-server only:
 
 If MyDGV is down, AI OS continues: research, planning, AI tasks, reports. Human sync queues/retries.
 
+## MyDGV capability gaps (from portal inspection)
+
+| Need | Portal reality |
+|---|---|
+| Employees / profiles / skills | Yes (`/admin/users`, profile, `/skills`) |
+| Tasks / projects / dueDate / statuses | Yes (Kanban + zones) |
+| Departments | Profile string only — no `/departments` entity |
+| Blockers | **Not in portal** — store in AI OS / sync as task comments later |
+| Capacity | **No FTE model** — derive from open tasks + time entries |
+| Machine auth | Added on `feature/dgv-ai-os-integration` (`x-dgv-os-key`); until deployed, interim Cognito admin env is supported in OS only |
+
 ## Forbidden without explicit approval
 
 Attendance edits, payroll, employee record mutation, payments, uncontrolled production deploys.
