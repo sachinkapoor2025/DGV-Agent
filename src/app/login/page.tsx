@@ -9,23 +9,41 @@ export default function LoginPage() {
   const [password, setPassword] = useState("dgv-admin-change-me");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [hint, setHint] = useState("");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setError("");
-    const res = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    setLoading(false);
-    if (!res.ok) {
-      setError("Invalid credentials");
-      return;
+    setHint("First sign-in can take up to a minute while Next.js compiles…");
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 90_000);
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (!res.ok) {
+        setError("Invalid credentials");
+        setLoading(false);
+        setHint("");
+        return;
+      }
+      setHint("Signed in — loading dashboard…");
+      window.location.href = "/dashboard";
+    } catch (err) {
+      clearTimeout(timer);
+      setLoading(false);
+      setHint("");
+      setError(
+        err instanceof Error && err.name === "AbortError"
+          ? "Sign-in timed out. Wait for Compiling to finish, then try again."
+          : "Sign-in failed. Check the server is running on this port.",
+      );
     }
-    router.push("/dashboard");
-    router.refresh();
   }
 
   return (
@@ -58,6 +76,7 @@ export default function LoginPage() {
               autoComplete="current-password"
             />
           </div>
+          {hint ? <p className="text-sm text-[var(--muted)]">{hint}</p> : null}
           {error ? <p className="text-sm text-[var(--danger)]">{error}</p> : null}
           <button className="btn primary w-full" disabled={loading} type="submit">
             {loading ? "Signing in…" : "Enter OS"}
