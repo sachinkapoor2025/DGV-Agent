@@ -1,14 +1,9 @@
+import { getAiProvider } from "@/integrations/ai-provider";
+
 /**
- * Integration adapters — structure ready; credentials required for live calls.
- *
- * Manual setup required (tell Divit):
- * - Slack: SLACK_BOT_TOKEN + SLACK_DEFAULT_CHANNEL
- * - GitHub: GITHUB_TOKEN (repo scope) for PR/issue automation
- * - Google Analytics: GA4_PROPERTY_ID + GOOGLE_APPLICATION_CREDENTIALS
- * - Search Console: GSC_SITE_URL + same Google creds
- * - Ads: platform-specific OAuth (Meta/Google Ads) — never auto-spend
- * - Drive: GOOGLE_DRIVE_FOLDER_ID for plan docs sync
- * - Cursor Agents / MCP: configure in Cursor; COO can dispatch via Task tool locally
+ * Integration adapters.
+ * AI default = Cursor (no separate LLM API key required in this workspace).
+ * MyDGV human login ≠ server integration key (do not store Cognito passwords in the OS).
  */
 
 export type IntegrationStatus = {
@@ -24,6 +19,7 @@ function has(...keys: string[]) {
 }
 
 export function listIntegrations(): IntegrationStatus[] {
+  const ai = getAiProvider();
   return [
     {
       id: "mydgv",
@@ -31,14 +27,21 @@ export function listIntegrations(): IntegrationStatus[] {
       configured: has("MYDGV_API_URL", "MYDGV_DGV_OS_API_KEY"),
       mode: has("MYDGV_API_URL", "MYDGV_DGV_OS_API_KEY") ? "execute" : "stub",
       setup:
-        "Deploy employee-portal feature/dgv-ai-os-integration with SAM param DgvOsApiKey. Set MYDGV_API_URL (API Gateway prod URL) + MYDGV_DGV_OS_API_KEY in DGV OS env. Never put the key in the browser.",
+        "Human login verified separately. For OS sync: deploy feature/dgv-ai-os-integration with DgvOsApiKey, then set MYDGV_API_URL + MYDGV_DGV_OS_API_KEY. Never put Cognito passwords in DGV OS env.",
+    },
+    {
+      id: "ai-provider",
+      name: `AI provider (${ai.id})`,
+      configured: ai.active,
+      mode: ai.mode,
+      setup: ai.setup,
     },
     {
       id: "cursor-agents",
       name: "Cursor AI Agents / MCP",
       configured: true,
       mode: "execute",
-      setup: "Local Cursor session + MCP namespaces; no extra secrets for core OS.",
+      setup: "Primary autonomous runtime while Divit works in Cursor with an active plan.",
     },
     {
       id: "github",
