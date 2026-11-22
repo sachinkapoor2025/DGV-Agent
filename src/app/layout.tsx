@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     "AI COO operating system for Divit Global Ventures — UsaRakhi, Blossompot, SpicyCenter, HalloweenReady.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
