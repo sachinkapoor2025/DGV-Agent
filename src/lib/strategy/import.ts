@@ -3,7 +3,7 @@ import path from "node:path";
 import { nanoid } from "nanoid";
 import { eq } from "drizzle-orm";
 import { audit } from "@/lib/audit";
-import { db, ensureSchema } from "@/lib/db/client";
+import { db, ensureSchema, sqlite } from "@/lib/db/client";
 import { strategies } from "@/lib/db/schema";
 import {
   StrategyDocumentSchema,
@@ -146,15 +146,28 @@ export function reviewStrategy(
   payload.status = decision;
   payload.reviewedBy = reviewer;
   payload.reviewedAt = new Date().toISOString();
-  db.update(strategies)
-    .set({
-      status: decision,
-      payloadJson: JSON.stringify(payload),
-      reviewedBy: reviewer,
-      reviewedAt: payload.reviewedAt,
-    })
-    .where(eq(strategies.id, id))
-    .run();
+  // Explicit better-sqlite3 write — drizzle update was not persisting reliably here.
+  const result = sqlite
+    .prepare(
+      `UPDATE strategies
+       SET status = ?, payload_json = ?, reviewed_by = ?, reviewed_at = ?
+       WHERE id = ?`,
+    )
+    .run(
+      decision,
+      JSON.stringify(payload),
+      reviewer,
+      payload.reviewedAt,
+      id,
+    );
+  if (!result.changes) {
+    throw new Error(`Strategy update failed for id=${id}`);
+  }
+  try {
+    sqlite.pragma("wal_checkpoint(TRUNCATE)");
+  } catch {
+    /* ignore */
+  }
   audit(reviewer, `strategy.${decision}`, "strategy", id);
   return payload;
 }

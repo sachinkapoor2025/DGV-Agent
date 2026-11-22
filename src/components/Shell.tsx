@@ -29,7 +29,7 @@ export function Shell({
           >
             DGV <span className="text-[var(--accent)]">OS</span>
           </Link>
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-1 lg:flex">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -41,12 +41,23 @@ export function Shell({
             ))}
           </nav>
           <div className="flex items-center gap-3 text-sm text-[var(--muted)]">
-            <span>
+            <span className="hidden sm:inline">
               {user.name} · {user.role}
             </span>
             <LogoutButton />
           </div>
         </div>
+        <nav className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 pb-3 lg:hidden">
+          {NAV.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="whitespace-nowrap rounded-lg px-3 py-1.5 text-sm text-[var(--muted)] hover:bg-[var(--bg-elevated)] hover:text-[var(--ink)]"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </header>
       <main className="mx-auto max-w-7xl px-4 py-6">{children}</main>
     </div>
